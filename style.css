@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --background-green-color: #065e7c;
+  --title-text-color: #202024;
+  --article-text-color: #121214;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Mulish";
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--background-green-color);
+  gap: 2.5rem;
+  padding-block: 1.2rem;
+  padding-inline: 28px;
+}
+
+.logoImage{
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  padding: 8px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.articleSearch {
+  width: 100%;
+}
+
+.profileImage {
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+}
+
+header input {
+  padding: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.20);
+  color: white;
+}
+
+::placeholder{
+  color: white;
+  font-size: 1.6rem;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 600;
+}
+
+.articleImage {
+  max-width: 100vw;
+  margin-bottom: 3.2rem;
+}
+
+.articleTitleBox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: 2.2rem;
+  margin-bottom: 3.2rem;
+}
+
+.articleTitle {
+  color: var(--title-text-color);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 160%;
+  font-family: "Mulish";
+}
+
+.actionBox {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.actionBox button {
+  width: 4rem;
+  height: 4rem;
+}
+
+.like,
+.dislike {
+  border: none;
+  padding: 12px;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--background-green-color);
+}
+
+.articleTextBox {
+  margin-left: 2.2rem;
+  margin-right: 2.2rem;
+  margin-bottom: 3.4rem;
+}
+
+.articleText {
+  color: var(--article-text-color);
+  font-family: "Mulish";
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 25.6px */
+}
+
+.asideBox {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-left: 22px;
+  margin-right: 24px;
+}
+
+.allCards {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+li {
+  list-style: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.cardImageBox {
+  display: flex;
+  width: 151px;
+  height: 84px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.cardImage {
+  width: 151px;
+  height: 84px;
+  border-radius: 5px;
+}
+
+.cardTitle {
+  color: var(--title-text-color);
+  font-size: 1.8ren;
+  font-weight: 700;
+  line-height: 160%; /* 28.8px */
+}
+
+.cardText {
+  color: var(--article-text-color);
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 160%; /* 25.6px */
+}
+
+
+footer {
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;
+  
+  margin-top: 4rem;
+
+  width: 100%;
+  background-color: var(--background-green-color);
+}
+
+footer p {
+  color: #FFF;
+  text-align: center;
+  font-family: 'Mulish';
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  padding: 1.6rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  
+
+  
+  body {
+    display: grid;
+    grid-template-areas: 
+      "header header header"
+      "main main aside"
+      "footer footer footer";
+    ;
+  }
+
+  header {
+    grid-area: header;
+    padding-inline: 112px;
+    margin-bottom: 44px;
+  }
+
+  main {
+    grid-area: main;
+    margin-left: 11rem;
+    margin-right: 3.4rem;
+  }
+
+  aside {
+    grid-area: aside;
+    margin-right: 11rem;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+
+  .articleTitleBox {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .articleImage {
+    width: 100%; /* Image width takes up the entire width of the main area */
+    max-width: calc(100%); /* Set maximum width to prevent overflow due to padding */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 405px;
+  }
+
+  .articleText {
+    color: var(--article-text-color, #121214);
+    font-family: Mulish;
+    font-size: 1.rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 25.6px */
+  }
+
+}
