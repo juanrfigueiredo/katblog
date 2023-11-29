@@ -44,6 +44,8 @@ header {
   width: 4.2rem;
   height: 4.2rem;
   border-radius: 50%;
+  padding: 0.5px;
+  background-color: white;
 }
 
 header input {
@@ -188,14 +190,11 @@ footer p {
   font-family: 'Mulish';
   font-size: 1.6rem;
   font-weight: 600;
-
   padding: 1.6rem;
   width: 100%;
 }
 
 @media (min-width: 768px) {
-  
-
   
   body {
     display: grid;
@@ -236,7 +235,7 @@ footer p {
     width: 100%; /* Image width takes up the entire width of the main area */
     max-width: calc(100%); /* Set maximum width to prevent overflow due to padding */
     height: auto; /* Maintain aspect ratio */
-    max-height: 405px;
+    max-height: 450px;
   }
 
   .articleText {
