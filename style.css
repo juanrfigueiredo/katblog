@@ -27,6 +27,55 @@ header {
   padding-inline: 28px;
 }
 
+header input {
+  padding: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.20);
+  color: white;
+
+  font-size: 1.6rem;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 600;
+}
+
+header input::placeholder{
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.6rem;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 600;
+}
+
+@media (max-width: 370px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--background-green-color);
+    gap: 2.0rem;
+    padding-block: 1.2rem;
+    padding-inline: 2rem;
+  }
+
+  header input {
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.20);
+    color: white;
+
+    font-size: 1.3rem;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 600;
+  }
+
+  header input::placeholder{
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.3rem;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 600;
+  }
+}
+
 .logoImage{
   display: flex;
   align-self: center;
@@ -38,6 +87,11 @@ header {
 
 .articleSearch {
   width: 100%;
+
+  color: white;
+  font-size: 1.6rem;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 600;
 }
 
 .profileImage {
@@ -46,21 +100,6 @@ header {
   border-radius: 50%;
   padding: 0.5px;
   background-color: white;
-}
-
-header input {
-  padding: 1.2rem;
-  border: none;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.20);
-  color: white;
-}
-
-::placeholder{
-  color: white;
-  font-size: 1.6rem;
-  font-family: 'Mulish', sans-serif;
-  font-weight: 600;
 }
 
 .articleImage {
@@ -193,6 +232,7 @@ footer p {
   padding: 1.6rem;
   width: 100%;
 }
+
 
 @media (min-width: 1070px) {
   
